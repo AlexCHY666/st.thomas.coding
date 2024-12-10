@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <title>How to Add Branded Mail in Apple Business Connect</title>
+    <h1><a href="../index">Home</a></h1>
+    <h1>How to Add Branded Mail in Apple Business Connect</h1>
+    <p>Branded Mail gives business owners the ability to add a brand logo and name to their business emails, so that they can make emails stand out in Mail app.</p>
+    <h2>Before you start</h2>
+    <h3>Domain structure</h3>
+        <p>You can add Branded Mail in three ways</p>
+        <ul>
+            <li>Domain and subdomains: @lbp-sb.com<br>By verifying @lbp-sb.com, all email address and subdomain will be used as Branded Mail. For example, it@stthomas.lbp-sb.com.</li>
+            <li>Subdomain only: @stthomas.lbp-sb.com<br>By verifying @stthomas.lbp-sb.com, all email address will be used as Branded Mail. For example, coordinator@stthomas.lbp-sb.com.</li>
+            <li>Specific email address: admin@lbp-sb.com<br>By verifying admin@lbp-sb.com, all email sent to customers will be used as Branded Mail.</li>
+        </ul>
+    <h3>DMARC verification</h3>
+    <p>Apple checks DNS records for DMARC (Domain-based Message Authentication, Reporting and Conformance), a TXT record in the domain's DNS record, to help prevent email spoofing and protect company's brand.</p>
+    <p>The following DMARC settings are required on your mail server's DNS record to use Branded Mail</p>
+    <ul>
+        <li>The "v" value must be set to "DMARC1"</li>
+        <li>The "p" or "sp" (only if registering subdomains where the DMARC record is on the parent domain) value must be set to "quarantine" or "reject"</li>
+        <li>The "pct" value must be set to "100"</li>
+    </ul>
+    <p>An example DNS can be the following:</p>
+    <blockquote>Type: TXT<br>Name: _dmarc<br>Content: "v=DMARC1; p=reject; pct=100;"</blockquote>
+    <h2>Add your domain</h2>
+    <ol>
+        <li>Select "Branded Mail" in the sidebar.</li>
+        <li>Select "Add", then enter the domain or email address.</li>
+        <li>Copy the unique TXT record for your domain, paste the record to your DNS server, restart the DNS service if needed.</li>
+        <li>Select "Verify".</li>
+        <li>When verification is complete, Apple will review your</li>
+    </ol>
+</html>

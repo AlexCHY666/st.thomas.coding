@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 定义仓库路径
-REPO_PATH="/Users/hello./Library/Mobile Documents/com~apple~CloudDocs/St. Thomas/Coding/Website.git"
+REPO_PATH="/Users/hello./Library/Mobile Documents/com~apple~CloudDocs/St. Thomas/Coding/St.Thomas-coding.git"
 
 # 切换到仓库路径
 cd "$REPO_PATH"
