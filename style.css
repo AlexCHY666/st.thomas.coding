@@ -9,6 +9,21 @@
     font-size: 16px;
 }
 
+.hutao{
+    display: none;
+}
+
+@media (color-gamut: P3){
+    .hutao{
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 20%;
+        display: block;
+        line-height: normal;
+    }
+}
+
 h1{
     text-align: center;
     margin-top: 80px;
