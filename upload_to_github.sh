@@ -10,4 +10,4 @@ git commit -m "Auto-update on $(date)"
 
 git push origin main
 
-echo "Pushed to GitHub"
+exit 0
