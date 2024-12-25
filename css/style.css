@@ -1,0 +1,196 @@
+/* format color:
+    background-color: rgb(240,240,240);
+    border-color: lightgray;
+    hover: white;
+    .navbar background-color: rgb(251,251,255);
+
+    format font-size:
+    h1: 2.4rem;
+    h2: 1.6rem;
+    h3: 1.2rem;
+*/
+
+@font-face {
+    font-family: SF_Pro_Rounded_Regular;
+    src: url(font/SF-Pro-Rounded-Regular.otf);
+}
+
+*{
+    font-family:SF_Pro_Rounded_Regular;
+    line-height: 32px;
+    font-size: 16px;
+}
+
+.hutao{
+    display: none;
+}
+
+@media (color-gamut: P3){
+    .hutao{
+        display: none;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 20%;
+        line-height: normal;
+    }
+}
+
+#toggle{
+    display: none;
+}
+
+.toggle{
+    cursor: pointer;
+    position: fixed;
+    right: 2rem;
+    top: 4rem;
+}
+
+.toggle .toggle_image{
+    width: 4rem;
+    height: 4rem;
+    background-image: url(../photo/P0.4.png);
+    background-size: cover;
+    display: inline-block;
+}
+
+.toggle p{
+    line-height: 0.8rem;
+    position: relative;
+    top: -1.6rem;
+}
+
+#toggle:checked + .toggle_image + p{
+    color: rgb(205,192,164);
+}
+
+h1{
+    text-align: center;
+    margin-top: 6rem;
+    font-size: 2.4rem;
+}
+
+h2, h2 a{
+    font-size: 1.6rem;
+}
+
+h3, h3 a{
+    font-size: 1.2rem;
+}
+/* table of contents */
+.toc{
+    display: flex;
+    padding: 16px;
+    margin: 16px;
+    background-color: rgba(240,240,240,0.32);
+    border: 4px solid lightgray;
+    border-radius: 16px;
+    position: relative;
+    backdrop-filter: blur(16px);
+}
+
+.toc a{
+    text-decoration: none;
+    font-size: 1.6rem;
+    z-index: 1;
+}
+
+.toc:hover{
+    padding-bottom: 4rem;
+    transition: 0.2s;
+    list-style: none;
+    background-color: white;
+}
+
+.toc img{
+    display: none;
+    margin-left: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.toc:hover img{
+    display: block;
+    height: 100%;
+}
+
+.separate_line{
+    margin: 16px 0;
+}
+
+.photo_inline{
+    border: 4px solid lightgray;
+    border-radius: 16px;
+    max-width: 80%;
+}
+
+.photo_hutao{
+    display: none;
+}
+
+.all_container{
+    width: 60%;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.h2_container{
+    background-color: rgb(240, 240, 240);
+    padding: 16px;
+    border-radius: 32px;
+}
+
+.h3_container{
+    padding: 16px;
+    border: 4px rgb(240,240,240);
+    border-radius: 16px;
+}
+
+.h3_container:hover{
+    background-color: white;
+    border-color: lightgray;
+    transition: all 0.2s;
+}
+
+.quote{
+    border-left: 4px solid lightgray;
+    border-radius: 8px;
+    padding-left: 16px;
+    margin-left: 64px;
+}
+
+.table_head_separate_line{
+    background-color: lightgray;
+    height: 2px;
+}
+
+.table_head{
+    margin: 0 16px;
+}
+
+.table_separate_line{
+    background-color: rgb(220,220,220);
+    height: 2px;
+}
+
+svg{
+    position: relative;
+    top: 6px;
+}
+
+.navbar{
+    max-width: 60%;
+    position: fixed;
+    background-color: rgb(251,251,255);
+    width: 100%;
+    display: block;
+    left: 0;
+    padding: 8px 20% 8px 20%;
+    top: 0;
+    margin: 0;
+    z-index: 9999;
+    border-bottom: 2px solid lightgray;
+}
