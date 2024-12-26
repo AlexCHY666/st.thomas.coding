@@ -1,12 +1,13 @@
 /* format color:
     hutao酒红, :hover: rgb(108,32,22)
     hutao gold: rgb(205,192,164)
-    background color: rgb(70,29,31)
+    background color: rgb(71,32,31)
     navbar: rgb(70,29,31)
 */
 
 *{
     color: white;
+    cursor: url('../photo/cursor.hutao.png') 16 4, auto;
 }
 
 h1, h2, h3, h2 a{
@@ -25,6 +26,40 @@ h1, h2, h3, h2 a{
     color: rgb(205,192,164);
     max-width: 64%;
 }
+
+.toc:hover .toc_hutao{
+    display: block;
+    height: 100%;
+}
+
+.toc_left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: none;
+}
+
+.toc_right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: none;
+}
+
+.toc:hover .toc_left{
+    display: block;
+    left: unset;
+    right: 100%;
+}
+
+.toc:hover .toc_right{
+    display: block;
+    right: unset;
+    left: 100%;
+}
+
 
 .all_container{
     background-color: rgb(71,32,31);
@@ -57,8 +92,30 @@ h1, h2, h3, h2 a{
     transition: all 0.2s;
 }
 
+.photo_lycoris{
+    display: block;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 20%;
+    z-index: 0;
+    transition: all 0.2s;
+}
+
+.drawing_lycoris{
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 10rem;
+    height: 60%;
+    z-index: -1;
+}
+
 @media (max-aspect-ratio: 6/8){
     .photo_hutao{
         width: 64%;
+    }
+    .photo_lycoris{
+        width: 40%;
     }
 }
