@@ -18,13 +18,13 @@
 *{
     font-family:SF_Pro_Rounded_Regular;
     line-height: 32px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .hutao{
     display: none;
 }
-
+/* unused, change display:none to display:block to activate */
 @media (color-gamut: P3){
     .hutao{
         display: none;
@@ -43,8 +43,8 @@
 .toggle{
     cursor: pointer;
     position: fixed;
-    right: 2rem;
-    top: 4rem;
+    right: 8%;
+    top: 6rem;
 }
 
 .toggle .toggle_image{

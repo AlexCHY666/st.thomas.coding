@@ -1,18 +1,22 @@
 const toggleThemeHutao = document.getElementById('toggle');
 const themeHutao = document.getElementById('style_hutao');
 
-toggleThemeHutao.addEventListener('change', () =>{
+// Load checked state
+window.addEventListener('load', () => {
+    const isChecked = localStorage.getItem('toggleThemeHutao') === 'true';
+    if (isChecked) {
+        themeHutao.removeAttribute('disabled');
+    } else {
+        themeHutao.setAttribute('disabled', 'true');
+    }
+});
+
+// Store checked state
+toggleThemeHutao.addEventListener('change', () => {
+    localStorage.setItem('toggleThemeHutao', toggleThemeHutao.checked);
     if (toggleThemeHutao.checked){
         themeHutao.removeAttribute('disabled');
     } else{
         themeHutao.setAttribute('disabled', 'true');
     }
-});
-
-window.addEventListener('load', () =>{
-    const isChecked = localStorage.getItem('toggleThemeHutaoState') === 'true';
-    toggleThemeHutao.checked = isChecked;
-});
-toggleThemeHutao.addEventListener('change', () =>{
-    localStorage.setItem('toggleThemeHutaoState', toggleThemeHutao.checked);
 });
