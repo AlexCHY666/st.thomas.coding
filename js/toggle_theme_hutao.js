@@ -8,3 +8,11 @@ toggleThemeHutao.addEventListener('change', () =>{
         themeHutao.setAttribute('disabled', 'true');
     }
 });
+
+window.addEventListener('load', () =>{
+    const isChecked = localStorage.getItem('toggleThemeHutaoState') === 'true';
+    toggleThemeHutao.checked = isChecked;
+});
+toggleThemeHutao.addEventListener('change', () =>{
+    localStorage.setItem('toggleThemeHutaoState', toggleThemeHutao.checked);
+});
