@@ -109,6 +109,17 @@ h1, h2, h3, h2 a{
     top: 10rem;
     height: 60%;
     z-index: -1;
+    max-width: 20%;
+}
+
+.drawing_lilium{
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 10rem;
+    height: 48%;
+    z-index: -1;
+    max-width: 20%;
 }
 
 @media (max-aspect-ratio: 6/8){

@@ -82,6 +82,7 @@ h2, h2 a{
 h3, h3 a{
     font-size: 1.2rem;
 }
+
 /* table of contents */
 .toc{
     display: flex;
@@ -139,6 +140,10 @@ h3, h3 a{
 }
 
 .drawing_lycoris{
+    display: none;
+}
+
+.drawing_lilium{
     display: none;
 }
 
