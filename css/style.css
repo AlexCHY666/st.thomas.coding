@@ -39,7 +39,6 @@
 
 #toggle{
     display: none;
-    cursor: url('../photo/cursor.hutao.png') 16 4, auto;
 }
 
 .toggle{
@@ -47,6 +46,7 @@
     position: fixed;
     right: 8%;
     top: 6rem;
+    cursor: url('../photo/cursor.hutao.png') 16 4, auto;
 }
 
 .toggle .toggle_image{
@@ -151,6 +151,7 @@ h3, h3 a{
     width: 60%;
     margin: 0 auto;
     z-index: 2;
+    transition: all 0.4s;
 }
 
 .h2_container{
@@ -209,4 +210,13 @@ svg{
     margin: 0;
     z-index: 9999;
     border-bottom: 2px solid lightgray;
+}
+
+@media (max-width: 800px){
+    .all_container{
+        width: 80%;
+    }
+    .toggle{
+        right: 0%;
+    }
 }
