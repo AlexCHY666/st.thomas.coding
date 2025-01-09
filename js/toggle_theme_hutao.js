@@ -1,7 +1,7 @@
 const toggleThemeHutao = document.getElementById('toggle');
 const themeHutao = document.getElementById('style_hutao');
 
-// Load checked state
+// load checked state
 window.addEventListener('load', () => {
     const isChecked = localStorage.getItem('toggleThemeHutao') === 'true';
     if (isChecked) {
@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
     }
 });
 
-// Store checked state
+// store checked state
 toggleThemeHutao.addEventListener('change', () => {
     localStorage.setItem('toggleThemeHutao', toggleThemeHutao.checked);
     if (toggleThemeHutao.checked){

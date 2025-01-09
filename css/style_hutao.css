@@ -10,6 +10,10 @@
     cursor: url('../photo/cursor.hutao.png') 16 4, auto;
 }
 
+html{
+    background-color: rgb(71,32,31);
+}
+
 h1, h2, h3, h2 a{
     color: rgb(205,192,164);
 }
@@ -62,7 +66,8 @@ h1, h2, h3, h2 a{
 
 
 .all_container{
-    background-color: rgb(71,32,31);
+    /* background-color: rgb(71,32,31); */
+    background-color: transparent;
 }
 
 .h2_container{
@@ -98,7 +103,7 @@ h1, h2, h3, h2 a{
     right: 0;
     bottom: 0;
     width: 20%;
-    z-index: 0;
+    z-index: -1;
     transition: all 0.2s;
 }
 

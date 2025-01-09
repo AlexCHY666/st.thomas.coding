@@ -47,6 +47,7 @@
     right: 8%;
     top: 6rem;
     cursor: url('../photo/cursor.hutao.png') 16 4, auto;
+    transition: all 0.4s;
 }
 
 .toggle .toggle_image{
@@ -218,5 +219,6 @@ svg{
     }
     .toggle{
         right: 0%;
+        max-width: 10%;
     }
 }
