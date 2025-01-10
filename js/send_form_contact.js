@@ -9,9 +9,7 @@ document.getElementById('contact').addEventListener('submit', function(event) {
         body: formData,
         mode: "no-cors" 
     }).then(() => {
-        window.location.href = "https://stthomas.managebac.com/login";
-    }).catch(error => {
-        console.error("Error submitting form:", error);
-        window.location.href = "https://stthomas.managebac.com/login";
-    });
+        document.querySelector('.success').classList.add('show');
+        document.querySelector('.overlay').classList.add('show');
+    })
 });

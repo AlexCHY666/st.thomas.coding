@@ -1,4 +1,4 @@
-REPO_PATH="/Users/hello./Library/Mobile Documents/com~apple~CloudDocs/St. Thomas/Coding/stthomas.lbp-sb.com.git"
+website="/Users/hello./Library/Mobile Documents/com~apple~CloudDocs/St. Thomas/Coding/stthomas.lbp-sb.com.git"
 
 cd "$website"
 

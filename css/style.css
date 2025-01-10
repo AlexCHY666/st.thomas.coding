@@ -157,12 +157,12 @@ h3, h3 a{
 
 .h2_container{
     background-color: rgb(240, 240, 240);
-    padding: 16px;
-    border-radius: 32px;
+    padding: 1rem;
+    border-radius: 2rem;
 }
 
 .h3_container{
-    padding: 16px;
+    padding: 1rem;
     border: 4px rgb(240,240,240);
     border-radius: 16px;
 }
@@ -233,6 +233,46 @@ svg{
 
 .contact #submit{
     background-color: lightgray;
+}
+
+.success{
+    opacity: 0;
+    position: fixed;
+    width: 40%;
+    height: 20vh;
+    border-radius: 1rem;
+    left: 30%;
+    top: 60%;
+    text-align: center;
+    background-color: lightgray;
+    transform: scale(0.8);
+    transition: all 0.4s;
+    z-index: -1;
+}
+
+.success.show{
+    opacity: 1;
+    top: 40%;
+    transform: scale(1);
+    z-index: 9999;
+}
+
+.overlay{
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.64);
+    backdrop-filter: blur(16px);
+    z-index: -1;
+    transition: all 0.4s;
+}
+
+.overlay.show{
+    opacity: 1;
+    z-index: 2;
 }
 
 @media (max-width: 800px){
