@@ -206,14 +206,41 @@ svg{
     width: 100%;
     display: block;
     left: 0;
-    padding: 8px 20% 8px 20%;
+    padding: 8px 20%;
     top: 0;
     margin: 0;
     z-index: 9999;
     border-bottom: 2px solid lightgray;
+    transition: all 0.4s;
+}
+
+.contact input, .contact #content{
+    color: black;
+    width: 100%;
+    border-radius: 1rem;
+    border: 2px solid black;
+    padding-left: 2rem;
+    box-sizing: border-box;
+}
+
+.contact #content{
+    height: 8rem;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 4rem;
+}
+
+
+.contact #submit{
+    background-color: lightgray;
 }
 
 @media (max-width: 800px){
+    .navbar{
+        max-width: 80%;
+        padding: 8px 10%;
+    }
+
     .all_container{
         width: 80%;
     }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link id="style_hutao" rel="stylesheet" href="../css/style_hutao.css" disabled>
+    <link rel="icon" href="../photo/favicon.ico" type="image/x-icon">
+</head>
+<body class="all_container">
+    <p class="navbar"><a href="../">Home</a> / <a href="../website_project">Guide to Apple Business Connect</a> / <a href="">Add a Location</a></p>
+    <p class="hutao"><img src="/photo/P0.png" alt="Hutao" width="100%">If you can see the Hutao above, your color space is P3.</p>
+    <img src="../photo/P0.9.png" alt="Lilum drawing" class="drawing_lilium">
+    <img src="../photo/P0.3.png" alt="Hutao" class="photo_hutao">
+    <img src="../photo/P0.7.png" alt="Lycoris radiata" class="photo_lycoris">
+    <img src="../photo/P0.8.png" alt="Lycoris drawing" class="drawing_lycoris">
+    <h1>Contact Us</h1>
+    <p>Fill out the following form should you have any questions.</p>
+    <hr class="separate_line"></hr>
+    <label class="toggle">
+        <input type="checkbox" id="toggle">
+        <span class="toggle_image"></span>
+        <p>Hutao<br>theme</p>
+    </label>
+    <script src="../js/toggle_theme_hutao.js"></script>
+    <div class="h2_container">
+        <form class="contact" id="contact">
+            <label for="name">Name</label>
+            <br>
+            <input type="text" id="name" name="entry.1912440181">
+            <br>
+            <label for="number">Phone number</label>
+            <br>
+            <input type="text" id="number" name="entry.1214055367" pattern="[0-9+-]*" title="Enter a phone number">
+            <br>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" id="email" name="entry.802884742">
+            <br>
+            <label for="content">Content</label>
+            <br>
+            <textarea id="content" name="entry.1873489768"></textarea>
+            <br>
+            <br>
+            <input type="submit" id="submit">
+            <br>
+        </form>
+        <script src="../js/send_form_contact.js"></script>
+    </div>
+</body>
+</html>

@@ -94,6 +94,7 @@ h1, h2, h3, h2 a{
     width: 40%;
     z-index: -1;
     transition: all 0.4s;
+    max-height: 100%;
 }
 
 .photo_lycoris{
@@ -104,6 +105,7 @@ h1, h2, h3, h2 a{
     width: 20%;
     z-index: -1;
     transition: all 0.4s;
+    max-height: 100%;
 }
 
 .drawing_lycoris{
@@ -126,6 +128,16 @@ h1, h2, h3, h2 a{
     z-index: -1;
     max-width: 20%;
     transition: all 0.4s;
+}
+
+.contact input, .contact #content{
+    color: rgb(205,192,164);
+    background-color: rgb(108,32,22);
+    border-color: rgb(205,192,164);
+}
+
+.contact #submit{
+    background-color: rgb(108,32,22);
 }
 
 @media (max-aspect-ratio: 6/8), (max-width: 800px){
