@@ -32,7 +32,7 @@
             <br>
             <label for="number">Phone number</label>
             <br>
-            <input type="text" id="number" name="entry.1214055367" pattern="[0-9+-]*" title="Enter a phone number">
+            <input type="text" id="number" name="entry.1214055367" pattern="[0-9+\-\s]*" title="Enter a phone number" placeholder="Only numbers, dash, plus sign, and space are allowed">
             <br>
             <label for="email">Email</label>
             <br>
@@ -40,7 +40,8 @@
             <br>
             <label for="content">Content</label>
             <br>
-            <textarea id="content" name="entry.1873489768"></textarea>
+            <textarea id="content" name="entry.1873489768" placeholder="Drag the bottom right corner to resize"></textarea>
+            <script src="../js/expand_form_content.js"></script>
             <br>
             <br>
             <input type="submit" id="submit">
@@ -50,7 +51,7 @@
     <div class="overlay"></div>
     <div class="success">
         <p class="success_text">Thank you for submitting.</p>
-        <a href="" class="success_left">Another response</a>
+        <a href="" class="success_left">New one</a>
         <a href="../" class="success_right">Home</a>
     </div>
         <script src="../js/send_form_contact.js"></script>

@@ -71,7 +71,7 @@ h1, h2, h3, h2 a{
 
 .h2_container{
     background-color: rgb(240,240,240,0.32);
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(1rem);
 }
 
 .h3_container:hover{
@@ -79,11 +79,11 @@ h1, h2, h3, h2 a{
 }
 
 .quote{
-    border-left: 4px solid rgb(205,192,164);
+    border-left: 0.25rem solid rgb(205,192,164);
 }
 
 .photo_inline{
-    border: 4px solid rgb(205,192,164);
+    border: 0.25rem solid rgb(205,192,164);
 }
 
 .photo_hutao{
