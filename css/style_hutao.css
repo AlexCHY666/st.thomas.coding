@@ -144,6 +144,10 @@ h1, h2, h3, h2 a{
     background-color: rgb(108,32,22);
 }
 
+.success_text{
+    color: rgb(205,192,164);
+}
+
 @media (max-aspect-ratio: 6/8), (max-width: 800px){
     .photo_hutao{
         width: 64%;
