@@ -4,6 +4,7 @@ document.getElementById('contact').addEventListener('submit', function(event) {
     const formData = new FormData(form);
     const inputs = form.querySelectorAll('input, textarea');
     const buttonSubmit = document.getElementById('submit');
+    const formSuggestion = document.getElementById('criteria_form');
 
     let isFilled = false;
     inputs.forEach(input => {
@@ -22,7 +23,7 @@ document.getElementById('contact').addEventListener('submit', function(event) {
         }).then(() => {
             document.querySelector('.success').classList.add('show');
             document.querySelector('.overlay').classList.add('show');
-            document.querySelector('.h2_container').classList.add('hidden');
+            formSuggestion.classList.add('hidden');
         });
     } else {
         alert('Fill in the form before submitting.')

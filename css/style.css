@@ -52,6 +52,7 @@ html{
     top: 6rem;
     cursor: url('../photo/cursor.hutao.png') 16 4, auto;
     transition: all 0.4s;
+    max-width: 10%;
 }
 
 .toggle .toggle_image{
@@ -95,7 +96,7 @@ h3, h3 a{
     margin: 1rem;
     background-color: rgba(240,240,240,0.32);
     border: 0.25rem solid lightgray;
-    border-radius: 16px;
+    border-radius: 1rem;
     position: relative;
     backdrop-filter: blur(1rem);
 }
@@ -220,7 +221,7 @@ svg{
 
 .h2_container.hidden{
     opacity: 0;
-    transform: translateY(-100%);
+    transform: scale(0.8) translateY(-100%);
     transition: all 0.4s;
 }
 
@@ -278,6 +279,14 @@ svg{
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.success_center{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 20%;
+    max-width: 40%;
 }
 
 .success_left{
