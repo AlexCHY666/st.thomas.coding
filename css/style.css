@@ -20,15 +20,47 @@
     line-height: 2rem;
     font-size: 1rem;
     cursor: default;
+    scroll-behavior: smooth;
 }
 
-html{
-    scroll-behavior: smooth;
+#loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s;
+}
+
+#loader::before{
+    content: '';
+    width: calc(20 * min(1vw, 1vh));
+    height: calc(20 * min(1vw, 1vh));
+    border-radius: 50%;
+    border: 1rem solid transparent;
+    border-top: 1rem solid black;
+    animation: spin 0.4s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 .hutao{
     display: none;
 }
+
 /* unused, change display:none to display:block to activate */
 @media (color-gamut: P3){
     .hutao{
@@ -132,10 +164,12 @@ h3, h3 a{
 }
 
 .photo_inline{
-    border: 0.25rempx solid lightgray;
+    border: 0.25rem solid lightgray;
     border-radius: 1rem;
     max-width: 80%;
+    transition: all 0.4s;
 }
+
 /* Hutao photo at the bottom left corner */
 .photo_hutao{
     display: none;
@@ -214,7 +248,7 @@ svg{
     padding: 0.5rem 20%;
     top: 0;
     margin: 0;
-    z-index: 9999;
+    z-index: 10;
     border-bottom: 2px solid lightgray;
     transition: all 0.4s;
 }
