@@ -250,7 +250,7 @@ svg{
     margin: 0;
     z-index: 10;
     border-bottom: 2px solid lightgray;
-    transition: all 0.4s;
+    transition: all 0s;
 }
 
 .h2_container.hidden{
