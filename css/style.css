@@ -23,7 +23,7 @@
     scroll-behavior: smooth;
 }
 
-#loader{
+#loader, #form_loader{
     position: fixed;
     top: 0;
     left: 0;
@@ -37,7 +37,11 @@
     transition: all 0.4s;
 }
 
-#loader::before{
+#form_loader{
+    display: none;
+}
+
+#loader::before, #form_loader::before{
     content: '';
     width: calc(20 * min(1vw, 1vh));
     height: calc(20 * min(1vw, 1vh));
@@ -45,6 +49,18 @@
     border: 1rem solid transparent;
     border-top: 1rem solid black;
     animation: spin 0.4s linear infinite;
+}
+
+#form_loader::after{
+    font-size: 2rem;
+    content: 'Submitting';
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    max-width: 20vw;
+    text-align: center;
+    align-items: center;
 }
 
 @keyframes spin{

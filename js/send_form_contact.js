@@ -21,6 +21,7 @@ document.getElementById('contact').addEventListener('submit', function(event) {
     const inputs = form.querySelectorAll('input, textarea');
     const buttonSubmit = document.getElementById('submit');
     const formSuggestion = document.getElementById('criteria_form');
+    const formLoader = document.getElementById('form_loader');
 
     let isFilled = false;
 
@@ -32,7 +33,7 @@ document.getElementById('contact').addEventListener('submit', function(event) {
 
     if (isFilled) {
         event.preventDefault();
-
+        formLoader.style.display = 'flex';
         fetch("https://docs.google.com/forms/d/e/1FAIpQLSeLUzCIfgjmIrQ5_WLAgCwliPWVqVraNd_mS3bSBL7XQs7KfQ/formResponse", {
             method: "POST",
             body: formData,
@@ -41,6 +42,7 @@ document.getElementById('contact').addEventListener('submit', function(event) {
             document.querySelector('.success').classList.add('show');
             document.querySelector('.overlay').classList.add('show');
             formSuggestion.classList.add('hidden');
+            formLoader.style.display = 'none';
         });
     } else {
         alert('Fill in the form before submitting.')

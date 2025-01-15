@@ -14,11 +14,11 @@ html{
     background-color: rgb(71,32,31);
 }
 
-#loader{
+#loader, #form_loader{
     background-color: rgb(71,32,31);
 }
 
-#loader::before{
+#loader::before, #form_loader::before{
     border-top: 1rem solid rgb(205,192,164);
 }
 
