@@ -2,7 +2,7 @@ const toggleThemeHutao = document.getElementById('toggle');
 const themeHutao = document.getElementById('style_hutao');
 
 // load checked state
-window.addEventListener('load', () => {
+document.addEventListener('DOMConentLoaded', () => {
     const isChecked = localStorage.getItem('toggleThemeHutao') === 'true';
     if (isChecked) {
         themeHutao.removeAttribute('disabled');
